@@ -26,53 +26,43 @@ shadowEnvironment = "shadow"
 filterFile = "filter.rgf"
 
   [redgateCompare.oracle]
-  filterFile = "Filter.scpf"
   ignoreRulesFile = "IgnoreRules.scpf"
-
-[redgateCompare.oracle.data.options.comparison]
-checkTablesForData = false
-databaseTimeZone = ""
-ignoreControlCharacters = false
-ignoreDateTypeDifferences = false
-ignoreWhiteSpace = false
-includeSourceTables = true
-includeViews = false
-trimTrailingSpaces = false
+  filterFile = "Filter.scpf"
 
 [redgateCompare.oracle.options.behavior]
-addPurgeClauseToAllTableDrops = false
-detectRenamedColumns = true
-excludeSchemaNames = false
 forceColumnOrder = false
-includeCrossSchemaPermissions = true
-includeProgramUnitRoles = false
+useForwardSlash = false
+includeSetDefineOff = false
 includeSetBlankLinesOn = false
-includeSetDefineOff = true
-includeSetDefineOffToScripter = true
 includeSystemPermissions = false
 includeUserRoles = false
+includeProgramUnitRoles = false
+includeCrossSchemaPermissions = true
+excludeSchemaNames = false
+detectRenamedColumns = true
+addPurgeClauseToAllTableDrops = false
 suppressDependentAlterCompile = false
-useForwardSlash = false
+includeSetDefineOffToScripter = true
 
 [redgateCompare.oracle.options.ignores]
+ignoreSlowDependencies = true
+ignoreDependentObjectsInOtherSchemas = true
+ignoreWhitespace = true
 ignoreCaseDifferencesInPlSqlBlocks = false
+ignoreDoubleQuotesInPlSqlBlocks = true
+ignoreExternalTableLocationInformation = false
 ignoreCommentsInPlSqlBlocks = false
 ignoreCommentsOnTablesViewsAndColumns = false
 ignoreConstraintNames = false
-ignoreDependentObjectsInOtherSchemas = true
-ignoreDoubleQuotesInPlSqlBlocks = true
-ignoreExternalTableLocationInformation = false
 ignoreIndexNames = false
-ignoreLengthSemantics = false
 ignoreLobStorage = false
-ignoreMaterializedViewStartWithValue = true
 ignoreParallel = false
-ignorePermissions = true
 ignoreSequenceCurrentValue = true
-ignoreSlowDependencies = true
+ignorePermissions = true
 ignoreSupplementalLogGroups = false
+ignoreMaterializedViewStartWithValue = true
+ignoreLengthSemantics = false
 ignoreSystemPartitions = false
-ignoreWhitespace = true
 
 [redgateCompare.oracle.options.storage]
 includeAllStorage = false
@@ -86,3 +76,12 @@ includeStorageLogging = false
 includeStoragePartitioning = false
 includeStoragePctFree = false
 includeStorageTablespace = false
+
+[redgateCompare.oracle.data.options.comparison]
+checkTablesForData = false
+includeViews = false
+trimTrailingSpaces = false
+ignoreControlCharacters = false
+ignoreWhiteSpace = false
+includeSourceTables = true
+ignoreDateTypeDifferences = false

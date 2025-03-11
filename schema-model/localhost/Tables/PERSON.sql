@@ -1,0 +1,4 @@
+CREATE TABLE "localhost".person (
+  "ID" NUMBER(*,0) NOT NULL,
+  "NAME" VARCHAR2(100 BYTE) NOT NULL
+);
